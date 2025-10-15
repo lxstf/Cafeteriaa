@@ -8,6 +8,6 @@ import java.util.Optional;
 @Repository
 public interface TBebidaRepository extends JpaRepository<TipoBebida, Integer> {
 
-        boolean existsByDescripcion(String descripcion);
-        Optional <TipoBebida> findByDescripcion(String descripcion);
+    boolean existsByDescripcion(String descripcion);
+    Optional <TipoBebida> findByDescripcion(String descripcion);
 }

@@ -1,6 +1,5 @@
 package fca.cafeteria.domain;
 
-
 import fca.cafeteria.data.Bebida;
 import fca.cafeteria.data.CatalogoRepository;
 import fca.cafeteria.data.TBebidaRepository;
@@ -28,7 +27,9 @@ public class CatalogoService {
             tipoAsociado = tbebidaRepository.save(tipoBebida);
         }
 
-        Bebida bebida = new Bebida(nombre,descripcion);
+        Bebida bebida = new Bebida();
+        bebida.setNombre(nombre);
+        bebida.setDescripcion(descripcion);
         bebida.setTipoBebida(tipoAsociado);
         catalogoRepository.save(bebida);
 
